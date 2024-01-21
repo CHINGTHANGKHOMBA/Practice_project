@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.rock-emoji{
+  height: 50px;
+
+}
+.paper-emoji{
+    height: 50px;
+}
+.scissors-emoji{
+    height: 50px;
+}
+.move-button{
+    background-color: transparent;
+    border: 3px solid rgb(252, 249, 249);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.js-result{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.result-emoji{
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.reset-score-button{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.js-score{
+    margin-top: 60px;
+}
