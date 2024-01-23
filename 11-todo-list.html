@@ -8,10 +8,13 @@
 </head>    
 <body>
     <p>Todo List</p>
-    <input placeholder="Add task" class="js-input-name">
+    <input placeholder="Add task" class="js-input-name"  onkeydown="
+    handleListKeyDown(event);">
     <button onclick="
     addTodo();
+  
     ">Add</button>
+    <div class="js-input-list"></div>
     <p></p>
     <script src="script/11-todo-list.js"></script>
 </body>
