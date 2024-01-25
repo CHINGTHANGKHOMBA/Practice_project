@@ -12,12 +12,14 @@ for (let i = 0; i <= todoList.length - 1; i++){
     const todoObject = todoList[i];
     const {name, dueDate} = todoObject;
     // const {dueDate} = todoObject;
-    const html = `<p>${name} ${dueDate} 
-  <button onClick="
-  todoList.splice(${i}, 1);
-  renderTodoList();
-  ">Delete</button>
-    </p>`;
+    const html = `
+    <div>${name}</div>
+    <div>${dueDate} </div>
+        <button onClick="
+        todoList.splice(${i}, 1);
+        renderTodoList();
+        " class="delete-todo-button">Delete</button>
+    `;
     todoListHTML += html;
 }
 
@@ -29,7 +31,6 @@ function handleListKeyDown(event){
    addTodo();
  }
     }
-
 
 function addTodo(){
     const inputElement = document.querySelector('.js-input-name');
