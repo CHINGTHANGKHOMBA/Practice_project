@@ -6,13 +6,14 @@
 </head>    
 <body>
     <p>Todo List</p>
-    <input placeholder="Add task" class="js-input-name"  onkeydown="
-    handleListKeyDown(event);">
-    <input type="date" class="js-due-date-input">
-    <button onclick="
-    addTodo();
-
-    ">Add</button>
+    <div class="todo-input-grid">
+        <input placeholder="Add task" class="js-input-name"  onkeydown="
+        handleListKeyDown(event);">
+        <input type="date" class="js-due-date-input">
+        <button onclick="
+        addTodo();
+        " class="add-todo-button" >Add</button>
+    </div>
     <div class="js-input-list"></div>
     
     <p></p>
