@@ -1,15 +1,10 @@
-const todoList = [{
-    name: '',
-    dueDate: ''
-}, {
-    name: '',
-    dueDate: ''
-}];
+const todoList = [];
 renderTodoList();
 function renderTodoList (){
 let todoListHTML = '';
 for (let i = 0; i <= todoList.length - 1; i++){
     const todoObject = todoList[i];
+    // console.log({Arrasas:todoList.length})
     const {name, dueDate} = todoObject;
     // const {dueDate} = todoObject;
     const html = `
