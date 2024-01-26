@@ -5,47 +5,43 @@
 </head>    
 <body>
     <p>YouTube Subscribe Button</p>
-     <button onClick="subscribe();" class="js-subscribe-button">Subscribe</button>
-
-     <p>Amazon Shipping Calculator</p>
+        <button onClick="subscribe();" class="js-subscribe-button">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
 
      <input placeholder="cost of order" class="js-input-cost" onkeydown="
      handleCostKeyDown(event);"
-     
      >
-
-     <button onclick="calculateTotal(); 
-     ">Calculator</button>
-
-     <p class="js-total-cost"></p>
+        <button onclick="calculateTotal(); 
+        ">Calculator</button>
+    <p class="js-total-cost"></p>
 
     <script>
 
         function handleCostKeyDown(event){
-        if (event.key === 'Enter'){
-        calculateTotal();
-     }
+                if (event.key === 'Enter'){
+                calculateTotal();
+            }
+                }
+
+        function calculateTotal(){
+            const inputElement = document.querySelector('.js-input-cost');
+            let cost = Number(inputElement.value);
+
+            if (cost < 40){
+                cost = cost + 10;
+            }
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
         }
 
-function calculateTotal(){
-    const inputElement = document.querySelector('.js-input-cost');
-    let cost = Number(inputElement.value);
-
-    if (cost < 40){
-        cost = cost + 10;
-    }
-document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
-}
-
-function subscribe(){
-        const buttonElement = document.querySelector('.js-subscribe-button');
-    if (buttonElement.innerHTML === 'Subscribe'){
-        buttonElement.innerHTML = 'Subscribed';
-    } else {
-        buttonElement.innerHTML = 'Subscribe';
-    }
-    }
-       
+        function subscribe(){
+                const buttonElement = document.querySelector('.js-subscribe-button');
+            if (buttonElement.innerHTML === 'Subscribe'){
+                buttonElement.innerHTML = 'Subscribed';
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+            }
+            }
+            
     </script>
 </body>
 
