@@ -49,3 +49,11 @@ body{
 .js-score{
     margin-top: 60px;
 }
+.js-autoPlay-button{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}

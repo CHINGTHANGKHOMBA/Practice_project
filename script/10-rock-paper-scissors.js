@@ -13,6 +13,29 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 //   }
 // }
 
+let isautoPlaying = false;
+let intervalId;
+function autoPlay(){
+  if(!isautoPlaying){
+  intervalId = setInterval(function(){
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 2000);
+    isautoPlaying = true;
+  } else {
+clearInterval(intervalId);
+isautoPlaying = false;
+  }
+  const buttonElement = document.querySelector('.js-autoPlay-button');
+  if (buttonElement.innerHTML === 'Auto Play'){
+      buttonElement.innerHTML = 'Stop';
+      buttonElement.classList.add('is-Stop')
+  } else {
+      buttonElement.innerHTML = 'Auto Play';
+      buttonElement.classList.remove('is-Stop')
+  }
+}
+
   function playGame(playerMove){
     const computerMove = pickComputerMove();     
   let result = '';
