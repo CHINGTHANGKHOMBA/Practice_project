@@ -13,19 +13,45 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 //   }
 // }
 
-let isautoPlaying = false;
-let intervalId;
-function autoPlay(){
+//using regular function
+
+// let isautoPlaying = false;
+// let intervalId;
+
+// function autoPlay(){
+//   if(!isautoPlaying){
+//   intervalId = setInterval(function(){
+//       const playerMove = pickComputerMove();
+//       playGame(playerMove);
+//     }, 2000);
+//     isautoPlaying = true;
+//   } else {
+// clearInterval(intervalId);
+// isautoPlaying = false;
+//   }
+
+//using addEventListner
+document.querySelector('.js-rock-button')
+.addEventListener('click', ()=> {
+  playGame('rock');
+})
+
+//using arrow function
+const autoPlay = () => {
   if(!isautoPlaying){
-  intervalId = setInterval(function(){
+  intervalId = setInterval(()=>{
       const playerMove = pickComputerMove();
       playGame(playerMove);
-    }, 2000);
+    }, 1000);
     isautoPlaying = true;
   } else {
 clearInterval(intervalId);
 isautoPlaying = false;
   }
+
+
+
+
   const buttonElement = document.querySelector('.js-autoPlay-button');
   if (buttonElement.innerHTML === 'Auto Play'){
       buttonElement.innerHTML = 'Stop';
